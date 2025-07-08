@@ -742,7 +742,8 @@ try
 
         try
         {
-            $wasMutexCreated = $false;
+            $guid = '43b2f84b-d5bf-48e1-8c21-3575cefa1662'
+            $wasMutexCreated = $false
             $mutex = New-Object -Typename System.Threading.Mutex -ArgumentList $true, "$productName {$guid}", ([ref]$wasMutexCreated)
 
             if (-not $wasMutexCreated)
